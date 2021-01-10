@@ -1,0 +1,92 @@
+.hero {
+  background-color: $bgc;
+  text-align: center;
+  height: 400px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./../images/mobile-hero-1x.jpg);
+  background-size: cover;
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, $hero-bg-color, $hero-bg-color),
+      url(./../images/mobile-hero-2x.jpg);
+  }
+
+  @media screen and(min-width: 481px) {
+    background-image: linear-gradient(to right, $hero-bg-color, $hero-bg-color),
+      url(./../images/tablet-hero-1x.jpg);
+    // background-size: cover;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $hero-bg-color,
+          $hero-bg-color
+        ),
+        url(./../images/tablet-hero-2x.jpg);
+    }
+  }
+
+  @media screen and(min-width: $tablet) {
+    max-width: 768px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  @media screen and(min-width: 769px) {
+    background-image: linear-gradient(to right, $hero-bg-color, $hero-bg-color),
+      url(./../images/desctop-hero-1x.jpg);
+    // background-size: cover;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $hero-bg-color,
+          $hero-bg-color
+        ),
+        url(./../images/desctoop-hero-2x.jpg);
+    }
+  }
+
+  @media screen and(min-width: $desctop) {
+    width: 100%;
+    height: 600px;
+    max-width: 1600px;
+  }
+}
+
+.hero__title {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-top: 118px;
+  @media screen and(max-width: $to-phone) {
+    max-width: 360px;
+  }
+  width: 360px;
+  color: #fff;
+  letter-spacing: 0.06em;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+
+  text-transform: uppercase;
+  @media screen and(min-width: $desctop) {
+    width: 696px;
+    padding-top: 200px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

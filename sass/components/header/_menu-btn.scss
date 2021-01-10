@@ -1,0 +1,71 @@
+.menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $accent-color;
+  }
+  @media screen and(min-width: $tablet) {
+    display: none;
+  }
+}
+.menu-button__icon--menu-close {
+  display: none;
+}
+.menu-block {
+  @media screen and(max-width: $to-tablet) {
+    display: none;
+  }
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+  }
+
+  @media screen and(min-width: $desctop) {
+    margin-left: 93px;
+  }
+}
+.menu-button.is-open {
+  .menu-button__icon--menu {
+    display: none;
+  }
+  .menu-button__icon--menu-close {
+    display: block;
+  }
+}
+.menu-block.is-open {
+  @media screen and(max-width: $to-tablet) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    text-align: center;
+
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ececec;
+    .page-header__navigation {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+    .header__contakts-list {
+      margin-bottom: 60px;
+    }
+    .navigation-list__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .contakts-list__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

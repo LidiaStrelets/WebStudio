@@ -1,0 +1,50 @@
+.backdrop.is-hidden .modal {
+  opacity: 0;
+}
+.modal {
+  background-color: #fff;
+  @media screen and(max-width: $to-phone) {
+    width: 100%;
+    position: relative;
+  }
+  @media screen and(min-width: $phone) {
+    width: 450px;
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and(min-width: $tablet) {
+      top: 207px;
+    }
+    @media screen and(min-width: $desctop) {
+      width: 528px;
+    }
+  }
+
+  //   height: 100px;
+
+  padding: 40px;
+}
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  &__icon {
+    transition: fill 250ms $cubic;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $accent-color;
+  }
+}

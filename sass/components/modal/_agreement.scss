@@ -1,0 +1,63 @@
+.modal__agreement {
+  position: relative;
+  margin-top: 20px;
+  &:hover .custom-checkbox {
+    border-color: $accent-color;
+  }
+}
+.agreement__description {
+  //   display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  @media screen and(min-width: $desctop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  margin-left: 22px;
+  color: $light-text-color;
+}
+.agreement__link {
+  position: relative;
+  display: inline-block;
+  color: $accent-color;
+  font-size: 11px;
+  @media screen and(min-width: $desctop) {
+    font-size: 14px;
+  }
+  &::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0.5px;
+    background-color: $accent-color;
+  }
+}
+.custom-checkbox {
+  position: absolute;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid black;
+  transition: border-color 250ms $cubic;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.checkbox__icon {
+  fill: #fff;
+}
+.initial__checkbox {
+  &:focus + .custom-checkbox {
+    border-color: $accent-color;
+  }
+  &:checked + .custom-checkbox {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+}

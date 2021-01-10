@@ -1,0 +1,157 @@
+body {
+  min-width: 230px;
+  overflow-x: scroll;
+  color: $text-color;
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.visually-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+// логотип
+.logo {
+  display: inline-block;
+  font-family: raleway, oleo script, sans-serif;
+  font-size: 24px;
+  line-height: 1.17;
+  &--accented {
+    color: $accent-color;
+  }
+  @media screen and(min-width: $desctop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+.page-header__logo {
+  color: #000;
+}
+.page-footer__logo {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+// кнопка
+.btn {
+  border: none;
+  background-color: $accent-color;
+  color: #fff;
+  letter-spacing: 0.06em;
+  font-size: 16px;
+  line-height: 1.87;
+
+  padding: 10px 32px 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  @media screen and(min-width: $desctop) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+.page-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and(max-width: $to-phone) {
+    max-width: $phone;
+  }
+  @media screen and(min-width: $phone) {
+    width: $phone;
+  }
+  @media screen and(min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and(min-width: $desctop) {
+    width: $desctop;
+  }
+}
+.section-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and(min-width: $desctop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.socmedia-list {
+  display: flex;
+  width: 206px;
+  justify-content: space-between;
+
+  margin-left: auto;
+  margin-right: auto;
+  &--light {
+    margin-top: 16px;
+  }
+}
+
+.socmedia__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  &--dark {
+    background-color: $footer-sm-icons-bgc;
+    transition: background-color 250ms $cubic;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+  &--light {
+    transition: background-color 250ms $cubic;
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+    &:hover .socmedia__icon--light,
+    &:focus .socmedia__icon--light {
+      fill: #fff;
+    }
+  }
+}
+.socmedia__icon--light {
+  fill: $icons-color;
+  transition: fill 250ms $cubic;
+}
+.socmedia__icon--dark {
+  fill: #fff;
+}
+
+body.modal-open {
+  overflow: hidden;
+}

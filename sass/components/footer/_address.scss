@@ -1,0 +1,33 @@
+.footer-address__box {
+  @media screen and(min-width: $desctop) {
+    margin-right: 70px;
+  }
+}
+.address-block {
+  @media screen and(max-width: $to-tablet) {
+    margin-bottom: 60px;
+  }
+}
+.address-list__item {
+  font-style: normal;
+  &:first-child {
+    color: #fff;
+  }
+  &:not(:first-child) {
+    color: $footer-address-links-color;
+    margin-top: 8px;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.address-list__link {
+  display: block;
+  color: inherit;
+  transition: color 250ms $cubic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  // text-align: center;
+}

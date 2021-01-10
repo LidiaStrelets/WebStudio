@@ -1,0 +1,32 @@
+.occupations {
+  display: none;
+  @media screen and(min-width: $desctop) {
+    display: block;
+    padding-bottom: 94px;
+  }
+}
+
+.occupations-list {
+  display: flex;
+  justify-content: space-between;
+}
+.occupations-list__item {
+  width: 370px;
+}
+.occupation__wrapper {
+  position: relative;
+}
+.occupation__description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding-top: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #fff;
+  background-color: $occupation-bgc;
+}
